@@ -1,0 +1,38 @@
+[
+    {
+        "linkName": "About Us",
+        "pageTitle": "About Us | EarnIn",
+        "pageEndsWithRegex": "/about$",
+        "value": "about",
+        "header": "Our Story",
+        "img": "Our story At EarnIn, we’re",
+        "screenName": "About"
+    },
+    {
+        "linkName": "Our Impact",
+        "pageTitle": "EarnIn's Impact to the Community | EarnIn",
+        "pageEndsWithRegex": "/impact$",
+        "value": "impact",
+        "header": "Reimagining the way money moves",
+        "img": "Reimagining the way money",
+        "screenName": "Impact"
+    },
+    {
+        "linkName": "In The News",
+        "pageTitle": "News and Press Releases | EarnIn",
+        "pageEndsWithRegex": "/press$",
+        "value": "press",
+        "header": "EarnIn press center",
+        "img": "EarnIn press center We’re",
+        "screenName": "Press"
+    },
+    {
+        "linkName": "Careers",
+        "pageTitle": "Find Your Role At EarnIn | EarnIn Careers ",
+        "pageEndsWithRegex": "/careers$",
+        "value": "careers",
+        "header": "Come grow with us",
+        "img": "Come grow with us Help us",
+        "screenName": "Careers"
+    }
+]
