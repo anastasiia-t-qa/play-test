@@ -1,11 +1,12 @@
 name: Playwright Tests
 on:
-  deployment_status:
+  push:
+    branches:
+      - master
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    if: github.event.deployment_status.state == 'success'
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
@@ -17,8 +18,6 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
-      env:
-        PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
     - uses: peaceiris/actions-gh-pages@v3.7.3
       if: always() # We want this to always run, even if test fail prior to this step running
       with:
@@ -27,4 +26,3 @@ jobs:
         keep_files: true # Set this to true to make sure we don't wipe out the other content in GitHub Pages
         user_name: 'github-actions[bot]' # This will be the username that gets stamped in the repo commit
         user_email: 'github-actions[bot]@users.noreply.github.com' # This will be the user email that gets stamped in the repo commit
-
